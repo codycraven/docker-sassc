@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 for i in "$@"; do
   case $i in
@@ -60,7 +60,8 @@ if [ -z ${VERSION+set} ]; then
   exit 1
 fi
 
-if [[ "$VERSION" =~ ^([0-9]*)\.([0-9]*)(\.([0-9]+((-|.)[^ ]*)?)|)?$ ]]; then
+VERSION_REGEX="^([0-9]*)\.([0-9]*)(\.([0-9]+((-|.)[^ ]*)?))?$"
+if [[ "$VERSION" =~ $VERSION_REGEX ]]; then
   MAJOR_VERSION="${BASH_REMATCH[1]}"
   MINOR_VERSION="${BASH_REMATCH[2]}"
   PATCH_VERSION="${BASH_REMATCH[4]}"
@@ -78,7 +79,7 @@ else
   TAG="${TAG:-`echo $MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION`}"
 fi
 
-cd "$(dirname "$(readlink -f "$BASH_SOURCE")")/$MAJOR_VERSION.$MINOR_VERSION"
+cd "./$MAJOR_VERSION.$MINOR_VERSION"
 docker build \
   --build-arg LIBSASS_VERSION="$LIBSASS_VERSION" \
   --build-arg SASSC_VERSION="$SASSC_VERSION" \
