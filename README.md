@@ -24,7 +24,7 @@ docker run --rm -v $(pwd):/data codycraven/sassc scss/src.scss > css/dest.css
 ## About SassC
 
 [SassC](https://github.com/sass/sassc) is a wrapper around
-[LibSass](http://github.com/sass/libsass) to provide a faster alternative to
+[LibSass](http://github.com/sass/libsass) to provide a faster alternative for
 compiling Sass to CSS than Ruby.
 
 
