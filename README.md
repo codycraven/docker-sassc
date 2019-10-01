@@ -5,7 +5,8 @@
 * [`3.2.5`, `3.2` (_3.2/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.2/Dockerfile)
 * [`3.3.6`, `3.3` (_3.3/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.3/Dockerfile)
 * [`3.4.8`, `3.4` (_3.4/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.4/Dockerfile)
-* [`3.5.0`, `3.5`, `3`, `latest` (_3.5/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.5/Dockerfile)
+* [`3.5.0`, `3.5` (_3.5/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.5/Dockerfile)
+* [`3.6.1`, `3.6`, `3`, `latest` (_3.6/Dockerfile_)](https://github.com/codycraven/docker-sassc/blob/master/3.6/Dockerfile)
 
 ## Usage
 
